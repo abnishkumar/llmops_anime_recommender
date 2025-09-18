@@ -156,7 +156,9 @@ docker build -t llmops-app:latest .
 
 kubectl create secret generic llmops-secrets \
   --from-literal=GROQ_API_KEY="" \
-  --from-literal=HUGGINGFACEHUB_API_TOKEN=""
+  --from-literal=HUGGINGFACEHUB_API_TOKEN="" \
+  --from-literal=MODEL_NAME="" \
+  --from-literal=EMBEDDING_MODEL_NAME=""
 
 kubectl apply -f llmops-k8s.yaml
 
